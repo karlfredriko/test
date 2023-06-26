@@ -1,0 +1,10 @@
+main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.field {
+  background-color: aquamarine;
+  height: 80vh;
+  width: 80vw;
+}
