@@ -10,6 +10,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 48px;
   background-color: rgb(213, 216, 216);
   max-width: 1140px;
   width: 100vw;
