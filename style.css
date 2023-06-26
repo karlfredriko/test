@@ -1,20 +1,53 @@
 :root {
   --bg-color: hsla(0, 0%, 100%, 1);
   --contrast-color: hsla(180, 24%, 81%, 1);
+  --section-color: hsla(0, 0%, 96%, 1);
+  --section-heading-color: hsla(180, 69%, 25%, 1);
 }
 body {
   margin: 0;
 }
-main {
+section {
+  font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 64px;
   align-items: center;
-  gap: 48px;
-  background-color: rgb(213, 216, 216);
+  background-color: var(--section-color);
   max-width: 1140px;
   width: 100vw;
   height: 100vh;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 27px;
+  color: var(--section-heading-color);
+}
+.card-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+}
+@media (max-width: 992px) {
+  section {
+    gap: 168px;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  h1 {
+    max-width: 380px;
+    line-height: inherit;
+  }
+  .card-wrapper {
+    flex-direction: column;
+    gap: 168px;
+    width: 100%;
+    align-items: center;
+  }
 }
 .card {
   display: flex;
@@ -22,12 +55,10 @@ main {
   gap: 24px;
   background-color: var(--bg-color);
   border-bottom: solid 4px var(--contrast-color);
-  border-radius: 24px;
+  border-radius: 0 24px;
   max-width: 278px;
-  width: 33%;
   height: fit-content;
   padding: 32px 24px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 .img-container {
   position: relative;
@@ -39,10 +70,10 @@ img {
   position: absolute;
   width: 100%;
   bottom: 32px;
-  border-radius: 24px 24px 0 0;
+  border-radius: 0 24px 0 0;
   margin-bottom: -32px;
 }
-h1 {
+h2 {
   margin: 0;
   margin-bottom: 8px;
   font-weight: 700;
